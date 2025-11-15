@@ -44,9 +44,11 @@ onCheckstatus() {
       this.router.navigate(['/status-ticket']);
     } else {
       console.warn("No ticket data available to send");
+      this.router.navigate(['/status-ticket']);
     }
   }).unsubscribe(); 
 }
 
 
 }
+
