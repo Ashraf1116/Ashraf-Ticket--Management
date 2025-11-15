@@ -1,0 +1,58 @@
+<div class="ticket-card">
+  <h2>Create Ticket</h2>
+
+  <form [formGroup]="ticketForm" (ngSubmit)="onSubmitcreate()" class="ticket-form">
+    <label>
+      Ticket Name
+      <input formControlName="tic_Name" placeholder="Enter ticket name" />
+    </label>
+   <div class="error" *ngIf="f['tic_Name'].touched && f['tic_Name'].invalid">
+  <small>Name is required.</small>
+</div>
+
+    <label>
+      Subject
+      <input formControlName="subject" placeholder="Enter subject" />
+    </label>
+    <div class="error" *ngIf="f['subject'].touched && f['subject'].invalid">
+  <small>Subject is required.</small>
+</div>
+
+    <label>
+      Description
+      <textarea formControlName="description" rows="4" placeholder="Describe the issue"></textarea>
+    </label>
+  <div class="error" *ngIf="f['description'].touched && f['description'].invalid">
+  <small>Description is required.</small>
+</div>
+
+    <label>
+  Client ID
+  <input
+    type="number"
+    formControlName="tic_ClientId"
+   [disabled]="true"
+  />
+</label>
+    <div class="error" *ngIf="f['tic_ClientId'].touched && f['tic_ClientId'].invalid">
+  <small>Client ID is required and must be >= 1.</small>
+</div>
+
+    <div class="actions">
+      <button type="submit" [disabled]="submitting">Submit</button>
+      <button type="button" class="secondary" (click)="resetForm()">Reset</button>
+        <button type="button" class="cancel-btn" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+
+  <div class="result" *ngIf="serverResponse">
+    <h3>Ticket Created Successfully!</h3>
+    <p><strong>Message:</strong> {{ serverResponse.message }}</p>
+    <p *ngIf="serverResponse.ticketId"><strong>ID:</strong> {{ serverResponse.ticketId }}</p>
+    <p *ngIf="serverResponse.ticketNumber"><strong>Number:</strong> {{ serverResponse.ticketNumber }}</p>
+  </div>
+
+  <div class="error-box" *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

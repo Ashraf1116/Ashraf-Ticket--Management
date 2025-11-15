@@ -1,0 +1,68 @@
+<div *ngIf="ticket" class="ticket-container">
+
+  <!-- HEADER -->
+  <div class="ticket-header error">
+   <span style="display: block; text-align: center;"> {{ ticket.getAllTickets.subject }}</span>
+    <span class="ticket-id">#{{ ticket.getAllTickets.tic_UniqueNum }}</span>
+  </div>
+
+  <div class="ticket-grid">
+
+    <!-- SECTION 1 -->
+    <div class="ticket-section">
+      <h3>Basic Ticket Information</h3>
+      <table>
+        <tr>
+          <td class="label">Ticket Status:</td>
+          <td>{{ ticket.getAllTickets.tic_StatusDes }}</td>
+        </tr>
+
+        <tr>
+          <td class="label">Track:</td>
+          <td>{{ ticket.cli_EntityDetails }}</td>
+        </tr>
+
+        <tr>
+          <td class="label">Ticket Number:</td>
+          <td>{{ ticket.getAllTickets.tic_UniqueNum }}</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="ticket-section">
+      <h3>User Information</h3>
+      <table>
+        <tr>
+          <td class="label">Name:</td>
+          <td>{{ ticket.cli_Name }}</td>
+        </tr>
+
+        <tr>
+          <td class="label">Email:</td>
+          <td>{{ ticket.cli_EmailId }}</td>
+        </tr>
+
+        <tr>
+          <td class="label">Phone:</td>
+          <td>{{ ticket.cli_MobileNumber }}</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="ticket-section">
+    <h3>Description</h3>
+    <div class="description-box">
+      {{ ticket.getAllTickets.description }}
+    </div>
+  </div>
+   <button type="button" (click)="onCheckstatus()"> Tickets</button>
+
+</div>
+
+<div *ngIf="!ticket" class="not-found">
+  <h2>No Ticket Found</h2>
+  <p>Please check your ticket number and try again.</p>
+</div>

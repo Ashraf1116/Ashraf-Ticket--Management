@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="header-section">
+    <div class="lock-icon">&#128274;</div>
+    <h2>Check Ticket Status</h2>
+    <p>Please provide your email address and a ticket number. This will sign you in to view your ticket.</p>
+  </div>
+
+  <form [formGroup]="ticketForm"  >
+
+    <label for="email">Email Address:</label>
+    <input id="email" formControlName="email" placeholder="e.g. ashraf.d1092@example.com">
+    <div class="error" *ngIf="ticketForm.get('email')?.invalid && ticketForm.get('email')?.touched">
+      Please enter a valid email.
+    </div>
+
+    <label for="ticketNumber">Ticket Number:</label>
+    <input id="ticketNumber" formControlName="ticketNumber" placeholder="e.g. 0512443">
+    <div class="error" *ngIf="ticketForm.get('ticketNumber')?.invalid && ticketForm.get('ticketNumber')?.touched">
+      Please enter a valid ticket number.
+    </div>
+
+   <button type="button" (click)="onSubmit()">View Ticket</button>
+
+  </form>
+
+  <div class="account-links">
+    <span>Have an account with us?</span>
+    <a href="/open-ticket">Sign In</a> or <a href="/create-user">register for an account</a> to access all your tickets.
+  </div>
+
+  <div class="new-ticket">
+    If this is your first time contacting us or you've lost the ticket number,
+    please <a href="/create-user">open a new ticket by registering</a>
+  </div>
+</div>

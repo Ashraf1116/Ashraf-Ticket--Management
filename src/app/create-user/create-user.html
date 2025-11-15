@@ -1,0 +1,70 @@
+<div class="register-container">
+    <h2 class="register-title">Register your account</h2>
+
+    <form class="register-form" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fullName">Name <span class="required">*</span></label>
+                <input id="fullName" type="text" [(ngModel)]="model.fullName" name="fullName" />
+            </div>
+
+            <!-- <div class="form-group">
+                <label for="entityname">Entity Name<span class="required">*</span></label>
+                <input id="entityname" type="text" [(ngModel)]="model.entityName" name="entityName" />
+            </div> -->
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email<span class="required">*</span></label>
+                <input id="email" type="text" [(ngModel)]="model.email" name="email" />
+            </div>
+
+            <div class="form-group">
+                <label for="entityType">Entity Type <span class="required">*</span></label>
+                <select id="entityType" [(ngModel)]="model.entityType" name="entityType">
+                    <option value="">-- Select Entity Type --</option>
+                    <option *ngFor="let e of entityTypes" [value]="e.id">
+                        {{ e.name }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="mobileNumber">Mobile Number <span class="required">*</span></label>
+                <input id="mobileNumber" type="text" [(ngModel)]="model.mobileNumber" name="mobileNumber" />
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address <span class="required">*</span></label>
+                <input id="address" type="text" [(ngModel)]="model.address" name="address" />
+            </div>
+        </div>
+
+        <div class="form-row password-section">
+            <div class="form-group">
+                <label for="password">Enter Password</label>
+                <input id="password" type="password" [(ngModel)]="model.password" name="password" autocomplete="new-password" />
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm New Password</label>
+                <input id="confirmPassword" type="password" [(ngModel)]="model.confirmPassword" name="confirmPassword" autocomplete="new-password" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="description">Description <span class="required">*</span></label>
+                <input id="description" type="text" [(ngModel)]="model.description" name="description" />
+            </div>
+        </div>
+
+        <div class="form-buttons">
+            <button type="submit" class="register-btn">Register</button>
+            <button type="button" class="cancel-btn" (click)="onCancel()">Cancel</button>
+        </div>
+    </form>
+</div>

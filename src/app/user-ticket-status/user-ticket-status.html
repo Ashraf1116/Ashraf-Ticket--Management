@@ -1,0 +1,62 @@
+
+<div class="container">
+  <div class="table-container">
+    <table *ngIf="role === 'Client'" class="ticket-table">
+      <thead>
+        <tr>
+          <th>Ticket #</th>
+          <th>Action</th>
+
+          <th>Help Topic</th>
+          <th>Issue Summary</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of allTicketsList">
+          <td>{{ ticket.getAllTickets.tic_UniqueNum }}</td>
+
+       
+          <td>
+            <a class="action-link" (click)="viewTicket(ticket)">View Ticket</a>
+          </td>
+          <td>{{ ticket.cli_HelpTopic }}</td>
+          <td>{{ ticket.getAllTickets.subject }}</td>
+          <td>{{ ticket.getAllTickets.tic_StatusDes }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table *ngIf="role === 'Admin'" class="ticket-table">
+      <thead>
+        <tr>
+          <th>Ticket #</th>
+          <th>Action</th>
+          <th>Help Topic</th>
+          <th>Issue Summary</th>
+          <th>Status</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let ticket of adminTickets">
+          <td>{{ ticket.tic_UniqueNum }}</td>
+          <td>
+            <a class="action-link" (click)="viewTicket(ticket)">View Ticket</a>
+          </td>
+
+
+          <td>{{ ticket.cli_HelpTopic }}</td>
+
+          <td>{{ ticket.subject }}</td>
+          <td>{{ ticket.tic_StatusDes }}</td>
+          <td>
+            <button class="edit-btn" (click)="editTicket(ticket)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

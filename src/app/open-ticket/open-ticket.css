@@ -1,0 +1,93 @@
+body {
+  background: linear-gradient(120deg, #f6fafd 0%, #e3ecef 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.login-container {
+  max-width: 400px;
+  margin: 50px auto 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(52, 89, 115, 0.13);
+  padding: 32px 36px;
+  text-align: center;
+}
+.login-title {
+  color: #d9534f;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+.login-title span {
+  color: #f25a0e;
+}
+.subtitle {
+  font-size: 1rem;
+  color: #6a8092;
+  margin-bottom: 24px;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.login-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e5ec;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+.login-form input:focus {
+  border-color: #f25a0e;
+  outline: none;
+}
+.login-form button {
+  padding: 12px 0;
+  background: linear-gradient(90deg, #d9534f, #f25a0e);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+.login-form button:hover {
+  background: linear-gradient(90deg, #f25a0e, #d9534f);
+}
+.register-section {
+  margin-top: 16px;
+  color: #333;
+}
+.register-link {
+  color: #f25a0e;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 4px;
+  transition: text-decoration 0.2s;
+}
+.register-link:hover {
+  text-decoration: underline;
+}
+.support-section {
+  margin-top: 22px;
+  font-size: 0.9rem;
+  color: #7a8b97;
+}
+.ticket-link {
+  color: #d9534f;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2px;
+}
+.ticket-link:hover {
+  text-decoration: underline;
+}
+
+
+
+

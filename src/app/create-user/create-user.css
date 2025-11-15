@@ -1,0 +1,117 @@
+.register-container {
+  max-width: 700px;
+  margin: 36px auto;
+  background: #fff;
+  box-shadow: 0 6px 32px rgba(60, 90, 130, 0.18);
+  border-radius: 18px;
+  padding: 40px 36px 32px 36px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.register-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #263e65;
+  margin-bottom: 0.25em;
+  text-align: left;
+}
+
+.register-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f4fa;
+  color: #2c456c;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 22px;
+}
+
+.note-icon {
+  font-size: 1.3em;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-row {
+  display: flex;
+  gap: 22px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #415075;
+}
+
+.required {
+  color: #d62d2d;
+  font-weight: bold;
+}
+
+input, select {
+  padding: 10px 12px;
+  border: 1.5px solid #b7c8e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #3450a1;
+  outline: none;
+  box-shadow: 0 0 0 2px #d1e3fa;
+}
+
+/* For Password section spacing */
+.password-section {
+  margin-top: 14px;
+}
+
+/* Buttons styling */
+.form-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  justify-content: flex-end;
+}
+
+.register-btn, .cancel-btn {
+  min-width: 120px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background: #395ad6;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.08rem;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.cancel-btn {
+  background: #f4f5f7;
+  color: #3450a1;
+  border: 1.5px solid #a3b3d6;
+}
+
+.register-btn:hover {
+  background: #254499;
+}
+
+.cancel-btn:hover {
+  background: #eaf2fd;
+}

@@ -1,0 +1,101 @@
+.container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 30px 25px;
+  border-radius: 18px;
+  box-shadow: 0 3px 20px rgba(36, 43, 67, 0.12);
+  background: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.lock-icon {
+  font-size: 46px;
+  color: #ff5500;
+  margin-bottom: 6px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #c14000;
+}
+
+p {
+  font-size: 14px;
+  color: #5a5a5a;
+  margin: 0 0 20px 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-bottom: 12px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff5500;
+  outline: none;
+}
+
+.error {
+  font-size: 13px;
+  color: red;
+  margin: -8px 0 12px 0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff5500;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #cbb0a0;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  background-color: #c14000;
+}
+
+.account-links, .new-ticket {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin: 18px 0 10px 0;
+}
+
+a {
+  color: #ff5500;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
